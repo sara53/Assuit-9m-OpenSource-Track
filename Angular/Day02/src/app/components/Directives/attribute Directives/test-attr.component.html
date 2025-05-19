@@ -1,0 +1,43 @@
+<!-- <div class="container p-4">
+  <h1>Attribute Directives {{ flag }}</h1>
+
+  <div class="row">
+    <p class="lead p-3 border rounded col-md-6" [class.customBg]="flag">
+      Lorem ipsum dolor sit, amet consectetur
+    </p>
+    <p
+      class="lead p-3 border rounded col-md-6"
+      [ngClass]="{
+        customBg: flag,
+        'bg-danger': !flag
+      }"
+    >
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas debitis,
+      consequuntur eos excepturi soluta
+    </p>
+  </div>
+  <button (click)="toggle()" class="btn btn-dark">Toggle</button>
+</div> -->
+<div class="container p-4">
+  <h1>Attribute Directives {{ flag }}</h1>
+
+  <div class="row">
+    <p
+      class="lead p-3 border rounded col-md-6 fw-bold"
+      [style.color]="flag ? 'green' : 'red'"
+    >
+      Lorem ipsum dolor sit, amet consectetur
+    </p>
+    <p
+      class="lead fw-bold p-3 border rounded col-md-6"
+      [ngStyle]="{
+        color: flag ? 'green' : 'red',
+        background: flag ? '#000' : '#ddd'
+      }"
+    >
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas debitis,
+      consequuntur eos excepturi soluta
+    </p>
+  </div>
+  <button (click)="toggle()" class="btn btn-dark">Toggle</button>
+</div>

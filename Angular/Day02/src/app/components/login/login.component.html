@@ -1,0 +1,18 @@
+<div class="container mt-5 p-5 border">
+  <h1>Login</h1>
+  <input
+    type="text"
+    placeholder="Enter Your Name"
+    name="x"
+    class="form-control my-3"
+    [(ngModel)]="studentName"
+  />
+  <input
+    type="text"
+    placeholder="Enter Your Age"
+    name="y"
+    class="form-control my-3"
+    [(ngModel)]="studentAge"
+  />
+  <button class="btn btn-dark" (click)="login()">Login</button>
+</div>

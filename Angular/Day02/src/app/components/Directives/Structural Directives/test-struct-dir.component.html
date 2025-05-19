@@ -1,0 +1,119 @@
+<!-- <div class="container mt-5 p-5">
+  <h1>ITI Tracks</h1>
+  <div class="row g-3">
+    @for (x of itiTracks; track $index; let i = $index) {
+    <div class="col-md-6">
+      <div class="border">
+        <h3 class="bg-dark text-light p-3">{{ i }} :{{ x }}</h3>
+        <div class="p-4" [ngClass]="{ 'alert alert-warning': $first }">
+          <p class="lead fs-4">
+            <strong class="text-danger">{{ $first }} </strong>Is this The First
+            Card
+          </p>
+          <p class="lead fs-4">
+            <strong class="text-danger">{{ $even }} </strong>Even Element
+          </p>
+          <p class="lead fs-4">
+            <strong class="text-danger">{{ $odd }} </strong>Odd Element
+          </p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor
+            dolore autem
+          </p>
+        </div>
+      </div>
+    </div>
+
+    }@empty {
+    <div class="alert alert-danger p-4">
+      <h1>No Tracks Founded</h1>
+    </div>
+    }
+  </div>
+</div> -->
+<!-- <div class="container mt-5 p-5">
+  <h1>Our Products</h1>
+  <div class="row g-3">
+    @for (product of products; track product.id) {
+    <div class="col-md-6">
+      <div class="border">
+        <h3 class="bg-dark text-light p-3">{{ product.name }}</h3>
+        <div class="p-4">
+          <p>{{ product.price }}</p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor
+            dolore autem
+          </p>
+        </div>
+      </div>
+    </div>
+
+    }@empty {
+    <div class="alert alert-danger p-4">
+      <h1>No Tracks Founded</h1>
+    </div>
+    }
+  </div>
+</div> -->
+<!-- Save navigation property -->
+<!-- <p>{{ student?.name }}</p> -->
+<!-- 
+<div class="container mt-5 border p-5 rounded">
+  <h1>Struct Directives</h1>
+  <p class="lead fs-3">{{ flag }}</p>
+
+  @if ( color == 'red') {
+  <p class="lead bg-danger p-4 rounded">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. At fugit eligendi
+    debitis ratione et deleniti iusto, tempora doloremque maiores ex! Nulla
+    ipsum consectetur eius odit quo numquam cupiditate, eligendi iure!
+  </p>
+  }@else if (color =='green'){
+
+  <p class="lead bg-success p-4 rounded">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur amet
+    iste commodi rem. Sint eaque perferendis sed voluptatibus, commodi laborum
+    impedit ad earum eligendi corporis dolore, quaerat a fugit exercitationem.
+  </p>
+  }@else {
+  <p class="lead bg-dark text-light p-4 rounded">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. At fugit eligendi
+    debitis ratione et deleniti iusto, tempora doloremque maiores ex! Nulla
+    ipsum consectetur eius odit quo numquam cupiditate, eligendi iure!
+  </p>
+  }
+
+  <button class="btn btn-dark" (click)="toggle()">Toggle</button>
+</div> -->
+<!-- <div class="container mt-5 border p-5 rounded">
+  <h1>Struct Directives</h1>
+  <p class="lead fs-3">{{ flag }}</p>
+
+  @switch (color) { @case ('red') {
+  <p class="lead bg-danger p-4 rounded">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. At fugit eligendi
+    debitis ratione et deleniti iusto, tempora doloremque maiores ex! Nulla
+    ipsum consectetur eius odit quo numquam cupiditate, eligendi iure!
+  </p>
+  } @case ('green') {
+  <p class="lead bg-success p-4 rounded">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. At fugit eligendi
+    debitis ratione et deleniti iusto, tempora doloremque maiores ex! Nulla
+    ipsum consectetur eius odit quo numquam cupiditate, eligendi iure!
+  </p>
+  } @case ('blue') {
+  <p class="lead bg-primary p-4 rounded">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. At fugit eligendi
+    debitis ratione et deleniti iusto, tempora doloremque maiores ex! Nulla
+    ipsum consectetur eius odit quo numquam cupiditate, eligendi iure!
+  </p>
+  } @default {
+  <p class="lead bg-dark p-4 rounded">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. At fugit eligendi
+    debitis ratione et deleniti iusto, tempora doloremque maiores ex! Nulla
+    ipsum consectetur eius odit quo numquam cupiditate, eligendi iure!
+  </p>
+  } }
+
+  <button class="btn btn-dark" (click)="toggle()">Toggle</button>
+</div> -->
