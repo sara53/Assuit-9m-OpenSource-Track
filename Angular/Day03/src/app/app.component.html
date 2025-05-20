@@ -1,0 +1,18 @@
+<!-- <div class="container">
+  <h1>App Component</h1>
+  <h4>{{ trackName }}</h4>
+  <app-content [x]="trackName" [y]="supName" />
+</div> -->
+<!-- <div class="container">
+  <app-students />
+</div> -->
+
+<div class="container p-5 border">
+  <h3>Organization Name : {{ orgName }}</h3>
+  <p class="lead mt-4">Number of Products in Your Cart : {{ count }}</p>
+  <app-login (myEvent)="getData($event)" />
+  <app-product-card
+    [ourOrgName]="orgName"
+    (onAddNewProduct)="getProductCount($event)"
+  />
+</div>
