@@ -7,7 +7,7 @@
   <app-students />
 </div> -->
 
-<div class="container p-5 border">
+<!-- <div class="container p-5 border">
   <h3>Organization Name : {{ orgName }}</h3>
   <p class="lead mt-4">Number of Products in Your Cart : {{ count }}</p>
   <app-login (myEvent)="getData($event)" />
@@ -15,4 +15,29 @@
     [ourOrgName]="orgName"
     (onAddNewProduct)="getProductCount($event)"
   />
+</div> -->
+<!-- <div class="p-5 border">
+  <app-products />
+</div> -->
+
+<div class="container">
+  <div class="row">
+    <app-shared-card class="col-md-6">
+      <div>
+        <h3>Track Name : Open Source</h3>
+        <p class="lead mt-3">Sup Name : Ahmed Ali</p>
+        <p class="lead mt-3">Student Number :20</p>
+        <button class="btn btn-success">Show More Details</button>
+      </div>
+    </app-shared-card>
+    <app-shared-card class="col-md-6">
+      <p class="lead alert alert-light">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quaerat
+        eaque similique accusantium veritatis ipsam quod reiciendis
+        necessitatibus fugiat officiis vitae aspernatur, culpa minima quas sint
+        consequatur blanditiis asperiores adipisci!
+      </p>
+      <button class="btn btn-outline-primary">Go To Home Page</button>
+    </app-shared-card>
+  </div>
 </div>

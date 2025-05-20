@@ -1,0 +1,19 @@
+<div class="alert alert-light mt-4">
+  <h2 #myHeader>Product Details</h2>
+  <p>Product Name : {{ product.name | uppercase }}</p>
+  @if(previousPrice){
+  <p class="lead">
+    Price Before Offer :<strong
+      class="text-danger text-decoration-line-through"
+    >
+      {{ previousPrice | currency }}
+    </strong>
+  </p>
+  }
+  <p class="leas">
+    Product Price :
+    <strong class="text-success fw-bold">
+      {{ product.price | currency }}</strong
+    >
+  </p>
+</div>
