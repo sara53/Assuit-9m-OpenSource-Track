@@ -1,0 +1,21 @@
+<h1 class="text-center text-muted">Our Products</h1>
+<div
+  class="alert alert-light mt-3 d-flex justify-content-between align-items-center"
+>
+  <button class="btn btn-outline-dark" [routerLink]="['/products', 0, 'edit']">
+    Add New Product
+  </button>
+  <input
+    type="text"
+    placeholder="Size ...."
+    class="form-control w-25"
+    [(ngModel)]="size"
+  />
+  <input
+    type="text"
+    placeholder="Category ...."
+    class="form-control w-25"
+    [(ngModel)]="category"
+  />
+  <button class="btn btn-success" (click)="filterBy()">Filter By</button>
+</div>
