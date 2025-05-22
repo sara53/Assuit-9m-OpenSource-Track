@@ -3,6 +3,7 @@ import { SharedCardComponent } from '../../../shared/shared-card/shared-card.com
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { StaticProductService } from '../../../services/static-product.service';
 import { IProduct } from '../../../models/iproduct';
+import { DynamicProductService } from '../../../services/dynamic-product.service';
 
 @Component({
   selector: 'app-product-details',
@@ -15,10 +16,14 @@ export class ProductDetailsComponent implements OnInit {
   product?: IProduct;
   constructor(
     private activatedRoute: ActivatedRoute,
-    private productService: StaticProductService
+    private productService: DynamicProductService
   ) {}
   ngOnInit(): void {
     this.productId = this.activatedRoute.snapshot.paramMap.get('id');
-    this.product = this.productService.getProductById(this.productId);
+    this.productService.getProductById(this.productId).subscribe({
+      next: (response) => {
+        this.product = response;
+      },
+    });
   }
 }

@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Ali"
+    },
+    {
+      "id": "2",
+      "name": "Mona"
+    }
+  ],
+  "products": [
+    {
+      "name": "Book",
+      "price": "200",
+      "quantity": "10",
+      "id": "1"
+    },
+    {
+      "name": "Sumsung watch",
+      "price": "4000",
+      "quantity": "60",
+      "id": "dd19"
+    },
+    {
+      "id": "7441",
+      "name": "Pen",
+      "price": "300",
+      "quantity": "10"
+    }
+  ],
+  "students": [
+    {
+      "id": "1",
+      "name": "Alaa",
+      "school": "Elhoda"
+    }
+  ]
+}

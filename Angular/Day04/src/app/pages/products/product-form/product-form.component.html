@@ -1,6 +1,8 @@
 <app-shared-card>
-  <h2 class="text-muted text-center">Add New Product</h2>
-  <form (submit)="productHandler($event)">
+  <h2 class="text-muted text-center">
+    {{ productId == 0 ? "Add New Product" : "Edit Product" }}
+  </h2>
+  <form [formGroup]="productForm" (submit)="productHandler($event)">
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Product Name</label>
       <input
@@ -9,10 +11,17 @@
         id="exampleInputEmail1"
         aria-describedby="emailHelp"
         placeholder="Enter Product Name"
+        formControlName="name"
       />
-      <div id="emailHelp" class="form-text">
-        We'll never share your email with anyone else.
+      @if(getName.touched){ @if(getName.hasError('required')){
+      <div id="emailHelp" class="text-danger form-text">
+        Product Name is Required
       </div>
+      } @if(getName.hasError('minlength')){
+      <div id="emailHelp" class="text-danger form-text">
+        Product Name length must be greater than 3
+      </div>
+      } }
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label"
@@ -23,7 +32,11 @@
         type="text"
         class="form-control"
         id="exampleInputPassword1"
+        formControlName="price"
       />
+      @if(getPrice.touched){ @if(getPrice.hasError('required')){
+      <div id="emailHelp" class="text-danger form-text">Price is required</div>
+      } }
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword3" class="form-label"
@@ -34,9 +47,17 @@
         type="text"
         class="form-control"
         id="exampleInputPassword3"
+        formControlName="quantity"
       />
+      @if (getQuantity.touched) { @if(getQuantity.hasError('required')){
+      <div id="emailHelp" class="text-danger form-text">
+        Quantity is required
+      </div>
+      } }
     </div>
-
-    <button type="submit" class="btn btn-dark">Add New Product</button>
+    <p class="lead mb-4">{{ productForm.value | json }}</p>
+    <button type="submit" class="btn btn-dark">
+      {{ productId == 0 ? "Add New Product" : "Edit Product" }}
+    </button>
   </form>
 </app-shared-card>
